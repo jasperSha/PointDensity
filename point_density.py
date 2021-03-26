@@ -169,7 +169,10 @@ def point_density(events: pd.DataFrame, coords: np.array, radius: float, gridsiz
     Parameters
     ----------
     events : pd.DataFrame
-        crime data with coordinates in WKT format, associated weights and dates.
+        dataframe with all points:
+            geometry in WKT format
+            scalar weights
+            datetime
     radius : float
         bandwidth in kilometers derived from Silverman's Rule of Thumb for kernel density.
     gridsize : float
@@ -259,14 +262,3 @@ def point_density(events: pd.DataFrame, coords: np.array, radius: float, gridsiz
     
  
     return final_grid
-
-
-
-if __name__ == '__main__':
-    pass
-
-
-
-
-
-
